@@ -1,6 +1,10 @@
 # ember-dc-shim
 
-This README outlines the details of collaborating on this Ember addon.
+```
+import d3 from 'ember-dc';
+import crossfilter from 'ember-dc';
+import dc from 'ember-dc';
+```
 
 ## Installation
 
