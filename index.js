@@ -12,6 +12,7 @@ module.exports = {
   included() {
     this._super(...arguments);
     this.d3Node = new UnwatchedDir(path.dirname(require.resolve('d3')));
+    this.d3TipNode = new UnwatchedDir(path.dirname(require.resolve('d3-tip')));
     this.dcNode = new UnwatchedDir(path.dirname(require.resolve('dc')));
     this.crossfilterNode = new UnwatchedDir(path.dirname(require.resolve('crossfilter')));
     this.importDependencies();
@@ -30,13 +31,6 @@ module.exports = {
 
     this.import(
       {
-        development: 'vendor/dc/dc.js',
-        production: 'vendor/dc/dc.min.js'
-      }
-    );
-
-    this.import(
-      {
         development: 'vendor/crossfilter/crossfilter.js',
         production: 'vendor/crossfilter/crossfilter.min.js'
       },
@@ -44,6 +38,18 @@ module.exports = {
         prepend: true
       }
     );
+
+    this.import(
+      {
+        development: 'vendor/dc/dc.js',
+        production: 'vendor/dc/dc.min.js'
+      }
+    );
+
+    this.import('vendor/d3-shim.js');
+    this.import('vendor/dc-shim.js');
+    this.import('vendor/crossfilter-shim.js');
+    this.import('vendor/d3-tip/index.js');
   },
 
   treeForVendor() {
@@ -52,24 +58,28 @@ module.exports = {
     trees.push(
       funnel(this.d3Node, {
         destDir: 'd3',
-        include: [new RegExp(/\.js$/)],
-        exclude: ['tests', 'ender', 'package'].map(key => new RegExp(key + '\.js$'))
+        files: ['d3.js', 'd3.min.js']
+      })
+    );
+
+    trees.push(
+      funnel(this.d3TipNode, {
+        destDir: 'd3-tip',
+        files: ['index.js']
       })
     );
 
     trees.push(
       funnel(this.dcNode, {
         destDir: 'dc',
-        include: [new RegExp(/\.js$/), new RegExp(/\.js.map$/)],
-        exclude: ['tests', 'ender', 'package'].map(key => new RegExp(key + '\.js$'))
+        files: ['dc.js', 'dc.min.js', 'dc.js.map']
       })
     );
 
     trees.push(
       funnel(this.crossfilterNode, {
         destDir: 'crossfilter',
-        include: [new RegExp(/\.js$/)],
-        exclude: ['tests', 'ender', 'package'].map(key => new RegExp(key + '\.js$'))
+        files: ['crossfilter.js', 'crossfilter.min.js']
       })
     );
 
