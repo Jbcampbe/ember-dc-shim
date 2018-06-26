@@ -10,13 +10,17 @@ test('d3 exports', (assert) => {
 });
 
 test('d3-tip exports', (assert) => {
-    assert.ok(d3.tip, 'd3-tip exports a function');
+    assert.ok(d3.tip, 'd3-tip exports');
 });
 
 test('dc exports', (assert) => {
-    assert.ok(crossfilter, 'crossfilter exports an object');
+    assert.ok(dc, 'dc exports an object');
+});
+
+test('dc-addons exports', (assert) => {
+    assert.ok(dc.bubbleCloud, 'dc-addons exports');
 });
 
 test('crossfilter exports', (assert) => {
-    assert.ok(dc, 'dc exports an object');
+    assert.ok(crossfilter, 'crossfilter exports an object');
 });

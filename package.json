@@ -25,6 +25,7 @@
     "d3": "^3.5.17",
     "d3-tip": "^0.7.1",
     "dc": "^2.1.8",
+    "dc-addons": "^0.13.5",
     "ember-cli-babel": "^6.3.0",
     "ember-cli-import-polyfill": "^0.2.0"
   },
