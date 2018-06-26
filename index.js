@@ -9,6 +9,7 @@ const path = require('path');
 let d3Node;
 let d3TipNode;
 let dcNode;
+let dcAddonsNode;
 let crossfilterNode;
 
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
     d3Node = new UnwatchedDir(path.dirname(require.resolve('d3')));
     d3TipNode = new UnwatchedDir(path.dirname(require.resolve('d3-tip')));
     dcNode = new UnwatchedDir(path.dirname(require.resolve('dc')));
+    dcAddonsNode = new UnwatchedDir(path.dirname(require.resolve('dc-addons')));
     crossfilterNode = new UnwatchedDir(path.dirname(require.resolve('crossfilter')));
     this.importDependencies();
   },
@@ -55,6 +57,7 @@ module.exports = {
     this.import('vendor/shims/dc-shim.js');
     this.import('vendor/shims/crossfilter-shim.js');
     this.import('vendor/d3-tip/index.js');
+    this.import('vendor/dc-addons/dist/bubble-cloud/dc-bubble-cloud.min.js');
   },
 
   treeForVendor() {
@@ -85,6 +88,13 @@ module.exports = {
       funnel(dcNode, {
         destDir: 'dc',
         files: ['dc.js', 'dc.min.js', 'dc.js.map']
+      })
+    );
+
+    trees.push(
+      funnel(dcAddonsNode, {
+        destDir: 'dc-addons',
+        files: ['dist/bubble-cloud/dc-bubble-cloud.min.js']
       })
     );
 
