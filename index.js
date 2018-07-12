@@ -2,6 +2,7 @@
 'use strict';
 
 const UnwatchedDir = require('broccoli-source').UnwatchedDir;
+const WatchedDir = require('broccoli-source').WatchedDir;
 const mergeTrees = require('broccoli-merge-trees');
 const funnel = require('broccoli-funnel');
 const path = require('path');
@@ -20,7 +21,7 @@ module.exports = {
     d3Node = new UnwatchedDir(path.dirname(require.resolve('d3')));
     d3TipNode = new UnwatchedDir(path.dirname(require.resolve('d3-tip')));
     dcNode = new UnwatchedDir(path.dirname(require.resolve('dc')));
-    dcAddonsNode = new UnwatchedDir(path.dirname(require.resolve('dc-addons')));
+    dcAddonsNode = new WatchedDir(path.dirname(require.resolve('dc-addons')));
     crossfilterNode = new UnwatchedDir(path.dirname(require.resolve('crossfilter')));
     this.importDependencies();
   },
@@ -57,7 +58,7 @@ module.exports = {
     this.import('vendor/shims/dc-shim.js');
     this.import('vendor/shims/crossfilter-shim.js');
     this.import('vendor/d3-tip/index.js');
-    this.import('vendor/dc-addons/dist/bubble-cloud/dc-bubble-cloud.min.js');
+    this.import('vendor/dc-addons/src/scripts/bubble-cloud.js');
   },
 
   treeForVendor() {
@@ -94,7 +95,7 @@ module.exports = {
     trees.push(
       funnel(dcAddonsNode, {
         destDir: 'dc-addons',
-        files: ['dist/bubble-cloud/dc-bubble-cloud.min.js']
+        files: ['src/scripts/bubble-cloud.js']
       })
     );
 
