@@ -2104,8 +2104,8 @@ dashdash@^1.12.0:
     assert-plus "^1.0.0"
 
 dc-addons-bubble-chart@^0.1.0:
-  version "0.1.0"
-  resolved "https://purecloud.artifactoryonline.com/purecloud/api/npm/inin-internal-npm/dc-addons-bubble-chart/-/dc-addons-bubble-chart-0.1.0.tgz#071f9f966a324b0d8190298f87ccb103f36fea95"
+  version "0.1.3"
+  resolved "https://purecloud.artifactoryonline.com/purecloud/api/npm/inin-internal-npm/dc-addons-bubble-chart/-/dc-addons-bubble-chart-0.1.3.tgz#bc0b22055f152e456e317f48cc4626a986aea138"
   dependencies:
     crossfilter "^1.3.11"
     d3 "^5.5.0"
