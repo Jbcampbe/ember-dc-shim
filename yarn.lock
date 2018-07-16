@@ -2107,7 +2107,7 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-dc-addons@^0.13.5:
+dc-addons-bubble-chart@^0.1.0:
   version "0.13.5"
   resolved "https://registry.yarnpkg.com/dc-addons/-/dc-addons-0.13.5.tgz#545a04981fb25f715632cfe941ac6ae12faef463"
   dependencies:
