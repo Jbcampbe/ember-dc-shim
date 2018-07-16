@@ -93,7 +93,7 @@ module.exports = {
 
     trees.push(
       funnel(dcAddonsNode, {
-        destDir: 'dc-addons-bubble-cloud',
+        destDir: 'dc-addons-bubble-chart',
         files: ['dist/bubble-cloud/dc-bubble-cloud.min.js']
       })
     );
