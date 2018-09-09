@@ -1,6 +1,6 @@
 {
   "name": "ember-dc-shim",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ember-cli shim for dc.js",
   "keywords": [
     "ember-addon"
