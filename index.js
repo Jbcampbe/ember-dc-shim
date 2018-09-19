@@ -57,7 +57,7 @@ module.exports = {
     this.import('vendor/shims/dc-shim.js');
     this.import('vendor/shims/crossfilter-shim.js');
     this.import('vendor/d3-tip/index.js');
-    this.import('vendor/dc-addons-bubble-chart/dist/bubble-cloud/dc-bubble-cloud.min.js');
+    this.import('vendor/dc-addons-bubble-chart/dc-bubble-cloud.js');
   },
 
   treeForVendor() {
@@ -94,7 +94,7 @@ module.exports = {
     trees.push(
       funnel(dcAddonsNode, {
         destDir: 'dc-addons-bubble-chart',
-        files: ['dist/bubble-cloud/dc-bubble-cloud.min.js']
+        files: ['dc-bubble-cloud.js']
       })
     );
 
