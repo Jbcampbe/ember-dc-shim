@@ -25,9 +25,7 @@
     "d3": "^5.5.0",
     "d3-tip": "^0.9.1",
     "dc": "^3.0.5",
-    "dc-addons-bubble-chart": "^0.1.0",
-    "ember-cli-babel": "^6.3.0",
-    "ember-cli-import-polyfill": "^0.2.0"
+    "dc-addons-bubble-chart": "^1.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -46,6 +44,8 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.15.0",
+    "ember-cli-babel": "^6.3.0",
+    "ember-cli-import-polyfill": "^0.2.0",
     "loader.js": "^4.2.3"
   },
   "engines": {
