@@ -1946,9 +1946,9 @@ dag-map@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/dag-map/-/dag-map-2.0.2.tgz#9714b472de82a1843de2fba9b6876938cab44c68"
 
-dc-addons-bubble-chart@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/dc-addons-bubble-chart/-/dc-addons-bubble-chart-1.0.0.tgz#a4211454d3c710dd5805eb6f9a41bc5904e7b6f1"
+dc-addons-bubble-chart@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dc-addons-bubble-chart/-/dc-addons-bubble-chart-1.0.1.tgz#8c99003d08cda212cf73c1b25e30251b8a33803f"
 
 dc@^3.0.5:
   version "3.0.6"
