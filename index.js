@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 
 const UnwatchedDir = require('broccoli-source').UnwatchedDir;
@@ -13,7 +12,7 @@ let dcAddonsNode;
 let crossfilterNode;
 
 module.exports = {
-  name: 'ember-dc',
+  name: require('./package').name,
 
   included() {
     this._super(...arguments);
