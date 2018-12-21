@@ -1,6 +1,13 @@
-ember-dc-shim [![Build Status](https://travis-ci.org/Jbcampbe/ember-dc-shim.svg?branch=master)](https://travis-ci.org/Jbcampbe/ember-dc-shim)
+ember-dc-shim 
 ==============================================================================
 
+
+NOTE
+------------------------------------------------------------------------------
+Now that it is possible to easily import packages from node_modules thanks to [ember-auto-import](https://github.com/ef4/ember-auto-import) this package should no longer be necessary.
+
+Description
+------------------------------------------------------------------------------
 Shim for making [dc.js](http://dc-js.github.io/dc.js/), [d3.js](https://d3js.org/), [crossfilter](http://crossfilter.github.io/crossfilter/), and [d3-tip](http://labratrevenge.com/d3-tip/) available in your ember apps as es6 modules
 
 Installation
